@@ -88,8 +88,7 @@ export default function CharacterSelect({ onSelect }) {
                 character={char}
                 emotion="idle"
                 size={110}
-                animate={false}
-                variant="plain"
+                priority
               />
             </div>
 
