@@ -4,11 +4,10 @@
  * 结局由 角色 + 匹配度 决定。
  *
  * 匹配度分层：
- *   0         → 隐藏结局（极低匹配）
- *   1-30      → 普通结局
- *   31-60     → 普通结局
- *   61-99     → 好结局
- *   100       → 隐藏结局（完美匹配）
+ *   0-52      → 隐藏结局（极低匹配）
+ *   53-60     → 普通结局
+ *   61-65     → 好结局
+ *   66-100    → 隐藏结局（完美匹配）
  *
  * 导出：
  *   calculateResult(characterId, dimensionScores) → { ending, matchScore, personality, evaluation }
@@ -173,8 +172,8 @@ function selectEnding(characterId, matchScore) {
     return first.neutral
   }
 
-  if (matchScore === 100) return charEndings.perfect
-  if (matchScore === 0) return charEndings.bad
+  if (matchScore >= 66) return charEndings.perfect
+  if (matchScore <= 52) return charEndings.bad
   if (matchScore >= 61) return charEndings.good
   if (matchScore >= 31) return charEndings.neutral
   return charEndings.bad
