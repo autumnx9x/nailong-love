@@ -54,7 +54,7 @@ export default function StartPage({ onStart }) {
 
         {/* 首页奶龙展示 — hero.png */}
         <motion.div
-          className="relative w-56 h-64 md:w-64 md:h-72 flex items-center justify-center"
+          className="relative w-44 h-52 sm:w-56 sm:h-64 md:w-64 md:h-72 flex items-center justify-center"
           animate={{ y: [-8, 8, -8] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
         >
@@ -77,7 +77,7 @@ export default function StartPage({ onStart }) {
 
       {/* 标题 */}
       <motion.h1
-        className="text-3xl md:text-5xl font-bold text-text-primary mb-3 tracking-wider text-center leading-tight"
+        className="text-2xl sm:text-3xl md:text-5xl font-bold text-text-primary mb-3 tracking-wider text-center leading-tight"
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}

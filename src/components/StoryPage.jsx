@@ -161,7 +161,7 @@ export default function StoryPage({
           </p>
 
           {/* 场景标题 — 最大字号，视觉焦点 */}
-          <h2 className="text-[2rem] md:text-[2.5rem] font-extrabold text-text-primary mb-3 leading-[1.15] tracking-tight">
+          <h2 className="text-[1.6rem] sm:text-[2rem] md:text-[2.5rem] font-extrabold text-text-primary mb-3 leading-[1.15] tracking-tight">
             {scene.title}
           </h2>
 

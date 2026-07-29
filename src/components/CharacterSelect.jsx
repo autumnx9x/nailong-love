@@ -87,7 +87,7 @@ export default function CharacterSelect({ onSelect }) {
               <CharacterImage
                 character={char}
                 emotion="idle"
-                size={130}
+                size={110}
                 animate={false}
                 variant="plain"
               />
