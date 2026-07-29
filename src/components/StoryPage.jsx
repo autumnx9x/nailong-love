@@ -192,7 +192,7 @@ export default function StoryPage({
         {atmosphere}
       </motion.p>
 
-      {/* ===== 4. 角色展示 + 对话气泡 ===== */}
+      {/* ===== 4. 对话气泡 ===== */}
       <motion.div
         key={`dialogue-${scene.id}`}
         className="relative w-full mb-8"
@@ -200,21 +200,6 @@ export default function StoryPage({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}
       >
-        {/* 角色图片 */}
-        <div className="flex justify-center mb-2">
-          <CharacterImage character={character} emotion="idle" size={120} />
-        </div>
-
-        {/* 角色名标签 */}
-        <div className="flex justify-center mb-3">
-          <span
-            className="text-xs font-semibold px-3 py-1 rounded-full text-white"
-            style={{ backgroundColor: character.color }}
-          >
-            {character.name}
-          </span>
-        </div>
-
         {/* 对话气泡本体 */}
         <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-5 md:p-6 shadow-lg">
           {/* 上尖角 */}
@@ -236,6 +221,16 @@ export default function StoryPage({
             </motion.p>
           </AnimatePresence>
         </div>
+      </motion.div>
+
+      {/* ===== 左下角奶龙装饰 ===== */}
+      <motion.div
+        className="fixed bottom-20 left-4 z-10 pointer-events-none select-none opacity-80"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 0.75, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <CharacterImage character={character} emotion="idle" size={70} />
       </motion.div>
 
       {/* ===== 5. 回答选项 ===== */}
