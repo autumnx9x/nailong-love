@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* ==========================================
+   莫兰迪色系 (Morandi Color Palette)
+   关键词：低饱和 · 温柔 · 治愈 · 安静 · 有故事感
+   ========================================== */
+
+:root {
+  --color-cream: #F0E8DB;
+  --color-pink: #E8D5D0;
+  --color-bg: #F7F3ED;
+  --color-accent: #C8A882;
+  --color-green: #D5DDD0;
+  --color-text: #4A3D38;
+  --color-text-light: #8B7D74;
+}
+
+@theme {
+  --color-cream: #F0E8DB;
+  --color-pink: #E8D5D0;
+  --color-bg: #F7F3ED;
+  --color-accent: #C8A882;
+  --color-green: #D5DDD0;
+  --color-text-primary: #4A3D38;
+  --color-text-light: #8B7D74;
+  --font-heading: 'LXGW WenKai', 'PingFang SC', serif;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+}
+
+/* ===== Global ===== */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #F7F3ED;
+  background-attachment: fixed;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 标题默认使用衬线字体 */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+/* 极淡纹理叠加 — 模拟纸张质感 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 168, 130, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 25%, rgba(180, 160, 196, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 75%, rgba(200, 180, 160, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(180, 150, 130, 0.3);
+  border-radius: 3px;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(200, 168, 130, 0.25);
+  color: var(--color-text);
+}
