@@ -62,6 +62,7 @@ export default function StartPage({ onStart }) {
             src={heroPng}
             alt="奶龙"
             loading="eager"
+            fetchpriority="high"
             className="max-w-full max-h-full object-contain"
           />
         </motion.div>
