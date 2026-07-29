@@ -225,9 +225,9 @@ export default function StoryPage({
 
       {/* ===== 左下角奶龙装饰 ===== */}
       <motion.div
-        className="fixed bottom-20 left-4 z-10 pointer-events-none select-none opacity-80"
+        className="fixed bottom-20 left-4 z-10 pointer-events-none select-none"
         initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 0.75, x: 0 }}
+        animate={{ opacity: 0.8, x: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <CharacterImage character={character} emotion="idle" size={70} />
