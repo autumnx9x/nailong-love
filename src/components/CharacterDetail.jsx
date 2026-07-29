@@ -71,8 +71,7 @@ export default function CharacterDetail({ character, onConfirm, onBack }) {
             character={character}
             emotion="idle"
             size={240}
-            animate={true}
-            variant="plain"
+            priority
           />
         </motion.div>
 

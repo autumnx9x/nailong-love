@@ -207,8 +207,7 @@ export default function EndingPage({ result, character, onRestart, onHome }) {
             character={character}
             emotion="idle"
             size={180}
-            animate={true}
-            variant="plain"
+            priority
           />
         </div>
 

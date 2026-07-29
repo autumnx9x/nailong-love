@@ -4,13 +4,12 @@ export default function CharacterImage({
   character,
   emotion = 'idle',
   size = 200,
+  priority = false,
   className = '',
 }) {
   const imageUrl = getCharacterImage(character.id, emotion)
 
-  if (!imageUrl) {
-    return null
-  }
+  if (!imageUrl) return null
 
   return (
     <div className={className}>
@@ -19,7 +18,7 @@ export default function CharacterImage({
         alt={character.name}
         width={size}
         height={size}
-        loading="lazy"
+        loading={priority ? 'eager' : 'lazy'}
         decoding="async"
         style={{
           width: size,
